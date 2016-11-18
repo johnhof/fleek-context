@@ -69,6 +69,8 @@ app.use(middleware);
 app.use((ctx) => {
   console.log(ctx.fleek);
   // GET /foo/myID => {
+  //   method: "GET",
+  //   path: "/foo/{id}",
   //   params: { id: myID },
   //   context: { /* ... */},
   //   swagger: SWAGGER
