@@ -24,5 +24,8 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "co-mocha": "^1.1.3"
+  },
+  "dependencies": {
+    "routington": "^1.0.3"
   }
 }

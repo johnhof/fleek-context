@@ -63,7 +63,6 @@ app.use(middleware);
 app.use((ctx) => {
   console.log(ctx.fleek);
   // GET /foo/myID => {
-  //   key: 'GET-/foo/{id}',
   //   context: { /* ... */},
   //   swagger: SWAGGER
   // }

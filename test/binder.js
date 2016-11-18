@@ -22,9 +22,7 @@ describe('Context Builder', () =>  {
     it('should compile a route/method mapping to endpoint configuration', () => {
       let binder = new ContextBinder(SWAGGER);
       expect(binder).instanceof(ContextBinder);
-      expect(binder.routeMap).to.be.an('object');
-      let routeKeys = Object.keys(binder.routeMap);
-      for (let key of routeKeys) expect(binder.routeMap[key]).to.be.an('object');
+      expect(binder.router).to.not.be.undefined;
     });
 
     it('should error if swagger is not provided, or malphormed', () => {
@@ -36,12 +34,12 @@ describe('Context Builder', () =>  {
   describe('bind', () => {
     it('should return the updated context', function () {
       let binder = new ContextBinder(SWAGGER);
-      let ctx = binder.bindCtx({ method: 'get', path: '/foo/{id}' });
+      let ctx = binder.bindCtx({ method: 'get', path: '/foo/SOME_ID' });
       validateCtx(ctx);
     });
     it('should bind updates to the context', function () {
       let binder = new ContextBinder(SWAGGER);
-      let ctx = { method: 'get', path: '/foo/{id}' };
+      let ctx = { method: 'get', path: '/foo/SOME_ID' };
       binder.bindCtx(ctx);
       validateCtx(ctx);
     });
