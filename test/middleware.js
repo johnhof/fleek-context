@@ -22,6 +22,9 @@ describe('Middleware', () => {
     middleware(ctx, () => {
       expect(ctx).to.be.an('object');
       expect(ctx.fleek).to.be.an('object');
+      expect(ctx.fleek.method).to.be.a('string');
+      expect(ctx.fleek.path).to.be.a('string');
+      expect(ctx.fleek.params).to.be.an('object');
       expect(ctx.fleek.context).to.be.an('object');
       expect(ctx.fleek.swagger).to.be.an('object');
       done();
