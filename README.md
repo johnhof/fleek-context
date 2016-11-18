@@ -4,6 +4,8 @@
 
 Middleware to parse and bind swagger request information
 
+**Node > 5.0.0**
+
 # Usage
 
 This package is to be used as middleware for [Koa2](https://github.com/koajs/koa/tree/v2.x) to parse swagger documentation and apply it to the `ctx` of the request, while also using the `ctx` to determine which swagger path+method is currently being requested.
