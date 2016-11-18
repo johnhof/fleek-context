@@ -11,6 +11,7 @@ let validateCtx = (ctx) => {
   expect(ctx.fleek).to.be.an('object');
   expect(ctx.fleek.context).to.be.an('object');
   expect(ctx.fleek.swagger).to.be.an('object');
+  expect(ctx.params).to.be.an('object');
 }
 
 describe('Context Builder', () =>  {
@@ -24,7 +25,6 @@ describe('Context Builder', () =>  {
       expect(binder).instanceof(ContextBinder);
       expect(binder.router).to.not.be.undefined;
     });
-
     it('should error if swagger is not provided, or malphormed', () => {
       expect(() => new ContextBinder()).to.throw(Error);
       expect(() => new ContextBinder({})).to.throw(Error);

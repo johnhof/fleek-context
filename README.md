@@ -77,6 +77,8 @@ app.use((ctx) => {
   //   context: { /* ... */},
   //   swagger: SWAGGER
   // }
+  console.log(ctx.params);
+  // GET /foo/myID => { id: myID }
 
   return Promise.resolve();
 });

@@ -1,6 +1,6 @@
 {
   "name": "fleek-context",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Middleware to parse and bind swagger request information",
   "main": "lib/middleware.js",
   "scripts": {
