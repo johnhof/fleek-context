@@ -4,7 +4,8 @@
 
 Middleware to parse and bind swagger request information
 
-**Node > 5.0.0**
+Requirements:
+- Node >= 6.0.0
 
 # Usage
 
@@ -89,3 +90,5 @@ app.listen(3000);
 # Authors
 
 - [John Hofrichter](github.com/johnhof)
+
+_Built and maintained with [<img width="15px" src="http://hart.com/wp-content/themes/hart/img/hart_logo.svg">](http://hart.com/) by the [Hart](http://hart.com/) team._
