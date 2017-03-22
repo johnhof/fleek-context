@@ -4,7 +4,7 @@ const mocha = require('co-mocha');
 const expect = require('chai').expect;
 
 const fleekContext = require('../lib/middleware');
-const SWAGGER = require('./swagger.json');
+const SWAGGER = require('./swagger_raw.json');
 
 describe('Middleware', () => {
   it('should accept options and return a function', () => {

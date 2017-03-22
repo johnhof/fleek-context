@@ -4,7 +4,8 @@ const mocha = require('co-mocha');
 const expect = require('chai').expect;
 
 const ContextBinder = require('../lib/binder');
-const SWAGGER = require('./swagger.json');
+const SWAGGER = require('./swagger_raw.json');
+const SWAGGER_PREFIX = require('./swagger_prefix.json');
 
 let validateCtx = (ctx) => {
   expect(ctx).to.be.an('object');
@@ -36,6 +37,10 @@ describe('Context Builder', () =>  {
       let binder = new ContextBinder(SWAGGER);
       let ctx = binder.bindCtx({ method: 'get', path: '/foo/SOME_ID' });
       validateCtx(ctx);
+      binder = new ContextBinder(SWAGGER_PREFIX);
+      ctx = binder.bindCtx({ method: 'get', path: `${SWAGGER_PREFIX.basePath}/foo/SOME_ID` });
+      validateCtx(ctx);
+
     });
     it('should bind updates to the context', function () {
       let binder = new ContextBinder(SWAGGER);
