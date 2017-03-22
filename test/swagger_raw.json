@@ -1,0 +1,38 @@
+{
+  "paths": {
+    "/foo/create": {
+      "post": {
+        "tags": ["foo"]
+      }
+    },
+    "/foo/{id}": {
+      "get": {
+        "tags": ["foo"]
+      }
+    },
+    "/foo/{id}/update": {
+      "put": {
+        "tags": ["foo"]
+      }
+    },
+    "/foo/{id}/remove": {
+      "delete": {
+        "tags": ["foo"]
+      }
+    },
+    "/bar/magic": {
+      "create": {
+        "tags": ["bar"]
+      },
+      "create": {
+        "tags": ["bar"]
+      },
+      "create": {
+        "tags": ["bar"]
+      },
+      "create": {
+        "tags": ["bar"]
+      }
+    }
+  }
+}
